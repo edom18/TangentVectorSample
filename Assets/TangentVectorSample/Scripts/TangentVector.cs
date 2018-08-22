@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class TangentVector : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _tangentVectorPrefab;
+
+    [SerializeField]
+    private GameObject _normalVectorPrefab;
+
+    [SerializeField]
+    private GameObject _binormalVectorPrefab;
+
+    private GameObject _tangentVector;
+    private GameObject _normalVector;
+    private GameObject _binormalVector;
+
     private Vector3? _lastHit = null;
     private List<Vector3> _verts = new List<Vector3>();
 
@@ -85,7 +98,35 @@ public class TangentVector : MonoBehaviour
             _v = uvvector[1];
             #endregion ### 接ベクトルを計算 ###
 
+            CreateVectorIfNeeded();
+
+            _tangentVector.transform.position = _lastHit.Value;
+            _normalVector.transform.position = _lastHit.Value;
+            _binormalVector.transform.position = _lastHit.Value;
+
+            _tangentVector.transform.forward = _v;
+            _normalVector.transform.forward = _n;
+            _binormalVector.transform.forward = _u;
+
             return;
+        }
+    }
+
+    private void CreateVectorIfNeeded()
+    {
+        if (_tangentVector == null)
+        {
+            _tangentVector = Instantiate(_tangentVectorPrefab);
+        }
+
+        if (_normalVector == null)
+        {
+            _normalVector = Instantiate(_normalVectorPrefab);
+        }
+
+        if (_binormalVector == null)
+        {
+            _binormalVector = Instantiate(_binormalVectorPrefab);
         }
     }
 

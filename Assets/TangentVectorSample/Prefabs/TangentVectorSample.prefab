@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1861029531176188}
+  m_IsPrefabAsset: 1
+--- !u!1 &1861029531176188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4587699583655158}
+  - component: {fileID: 114234510074712958}
+  m_Layer: 0
+  m_Name: TangentVectorSample
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4587699583655158
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1861029531176188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2078064, y: 0.15910554, z: -0.11847323}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114234510074712958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1861029531176188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59c357564ff713940a2fbe059695d6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tangentVectorPrefab: {fileID: 1061868709887404, guid: 85812e630e3ff4484a7a59312c0176d5,
+    type: 2}
+  _normalVectorPrefab: {fileID: 1021215214189132, guid: 140f77a0a60c9400da584337fb88c970,
+    type: 2}
+  _binormalVectorPrefab: {fileID: 1100160240205588, guid: 44107a4024e8d44e683e678e3f8368f2,
+    type: 2}
