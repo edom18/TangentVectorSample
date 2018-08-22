@@ -179,7 +179,7 @@ public class Math
             new Vector3(p[2].z, uv[2].x, uv[2].y),
         };
 
-        // UV方向の接ベクトル、順法線ベクトルを計算する
+        // UV方向の接ベクトル、従法線ベクトルを計算する
         Vector3 u = Vector3.zero;
         Vector3 v = Vector3.zero;
 
